@@ -1,8 +1,8 @@
-## Ideensammlung
-Hier kann jeder seine Idee eintragen. Irgendwann machen wir eine Abstimmung.
+# FH-Guide
 
-* [FH internes Multispeichersystem "FH Guide"](https://github.com/Lulon27/projektmanagement/issues/1#issue-1036194839)
-* [Globales Versandunternehmen](https://github.com/Lulon27/projektmanagement/issues/3)
-*
-*
-*
+Details gibt es im Issue [FH-Guide](https://github.com/Lulon27/projektmanagement/issues/1#issue-1036194839).
+
+### Scrum-Tag
+
+Unser Scrum-Tag ist Donnerstag.<br>
+An diesem Tag treffen wir uns und reden über das Projekt.
