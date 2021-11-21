@@ -10,7 +10,18 @@ Bis hierhin sollten alle Gruppen eine gewisse Grundstruktur und Idee haben, mit 
 Für alle [Teilgruppen](https://docs.google.com/spreadsheets/d/1OF39aJFD2xsa1V6o9rrrKWcnkTGx6LL6u8j6PGLAdEw/edit#gid=0) ist ein Issue angelegt das im [Main Board](https://github.com/Lulon27/projektmanagement/projects/1) in der Spalte "To Do" wartet.
 Die Ergebnisse können dann zusammengefügt und angeglichen werden und stellen dann unsere Software Spezifikation dar.
 
-### Scrum-Tag
+[Update]
 
-**Unser Scrum-Tag ist Donnerstag.**<br>
-*An diesem Tag treffen wir uns und reden über das Projekt.*
+Der Spezifikations Meilenstein wird verlängert. Durch Ungereimtheiten und verlegtem Meeting ist die Planung nach hinten verschoben worden.
+Es sollte aber in den kommenden Tagen abgeschlossen sein.
+
+### [2. Meilenstein](https://github.com/BTBlueTiger/projektmanagement/projects/2)
+
+Es soll ein Prototyp entstehen, der die grundlegenden Funktionen der Applikationen darstellen können soll.
+Das bedeutet, dass die Frontend Leute mithilfe des Backends eine funktionierende Applikationen mit Informationen aus dem Backend gefüttert 
+starten können. Dabei geht es um das Grundgerüst, nicht um etwaige folgende Features.
+
+### Finaler Meilenstein
+
+Das Projekt soll hier das funktionierende Grundgerüst iterativ erweitert haben. Funktionen die wünschenswert sind, werden nach Absprache priorisiert.
+Weitere Ergänzung werden nach dem Fortschritt und dazugelerntem ersichtlich.
