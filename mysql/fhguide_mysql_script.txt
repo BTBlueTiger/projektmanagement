@@ -1,0 +1,149 @@
+CREATE DATABASE `fhguide` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE fhguide;
+
+CREATE TABLE `account` (
+  `accountID` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(16) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `createdate` date NOT NULL,
+  PRIMARY KEY (`accountID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `module` (
+  `moduleID` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `description` varchar(200) DEFAULT NULL,
+  `active` tinyint NOT NULL,
+  `dependencies` varchar(500) DEFAULT NULL,schedule_course
+  `tags` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`moduleID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `rating` (
+  `ratingID` int NOT NULL AUTO_INCREMENT,
+  `description` varchar(200) DEFAULT NULL,
+  `accountID` int NOT NULL,
+  `moduleID` int NOT NULL,
+  PRIMARY KEY (`ratingID`),
+  KEY `account_rating_idx` (`accountID`),
+  KEY `module_rating_idx` (`moduleID`),
+  CONSTRAINT `account_rating` FOREIGN KEY (`accountID`) REFERENCES `account` (`accountID`),
+  CONSTRAINT `module_rating` FOREIGN KEY (`moduleID`) REFERENCES `module` (`moduleID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `ratingvalue` (
+  `ratingvalueID` int NOT NULL AUTO_INCREMENT,
+  `categorie` varchar(25) NOT NULL,
+  `value` int NOT NULL DEFAULT '0',
+  `ratingvaluecol` varchar(45) NOT NULL,
+  `ratingid` int NOT NULL,
+  PRIMARY KEY (`ratingvalueID`),
+  KEY `rating_ratingvalue_idx` (`ratingid`),
+  CONSTRAINT `rating_ratingvalue` FOREIGN KEY (`ratingid`) REFERENCES `rating` (`ratingID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `faq` (
+  `faqID` int NOT NULL AUTO_INCREMENT,
+  `question` varchar(200) NOT NULL,
+  `answer` varchar(200) DEFAULT NULL,
+  `categorie` varchar(25) DEFAULT NULL,
+  `accountID` int NOT NULL,
+  `moduleID` int NOT NULL,
+  PRIMARY KEY (`faqID`),
+  KEY `account_faq_idx` (`accountID`),
+  KEY `module_faq_idx` (`moduleID`),
+  CONSTRAINT `account_faq` FOREIGN KEY (`accountID`) REFERENCES `account` (`accountID`),
+  CONSTRAINT `module_faq` FOREIGN KEY (`moduleID`) REFERENCES `module` (`moduleID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `schedule` (
+  `scheduleID` int NOT NULL AUTO_INCREMENT,
+  `expiredate` date DEFAULT NULL,
+  `createdate` date NOT NULL,
+  `accountID` int NOT NULL,
+  PRIMARY KEY (`scheduleID`),
+  KEY `account_schedule_idx` (`accountID`),
+  CONSTRAINT `account_schedule` FOREIGN KEY (`accountID`) REFERENCES `account` (`accountID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `course` (
+  `courseID` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(25) NOT NULL,
+  `description` varchar(200) DEFAULT NULL,
+  `room` varchar(10) NOT NULL,
+  `zoomID` int DEFAULT NULL,
+  `moduleID` int NOT NULL,
+  PRIMARY KEY (`courseID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `zoom` (
+  `zoomID` int NOT NULL AUTO_INCREMENT,
+  `password` varchar(20) DEFAULT NULL,
+  `link` varchar(150) DEFAULT NULL,
+  `courseID` int NOT NULL,
+  PRIMARY KEY (`zoomID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+ALTER TABLE `course` 
+ADD INDEX `zoom_course_idx` (`zoomID` ASC) VISIBLE;
+;
+ALTER TABLE `course` 
+ADD CONSTRAINT `zoom_course`
+  FOREIGN KEY (`zoomID`)
+  REFERENCES `zoom` (`zoomID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `course` 
+ADD INDEX `module_course_idx` (`moduleID` ASC) VISIBLE;
+;
+ALTER TABLE `course` 
+ADD CONSTRAINT `module_course`
+  FOREIGN KEY (`moduleID`)
+  REFERENCES `module` (`moduleID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `zoom` 
+ADD INDEX `course_zoom_idx` (`courseID` ASC) VISIBLE;
+;
+ALTER TABLE `zoom` 
+ADD CONSTRAINT `course_zoom`
+  FOREIGN KEY (`courseID`)
+  REFERENCES `course` (`courseID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+
+CREATE TABLE `appointment` (
+  `appointmentid` int NOT NULL AUTO_INCREMENT,
+  `day` varchar(10) NOT NULL,
+  `start` varchar(10) NOT NULL,
+  `end` varchar(10) NOT NULL,
+  `courseID` int NOT NULL,
+  PRIMARY KEY (`appointmentid`),
+  KEY `course_appointment_idx` (`courseID`),
+  CONSTRAINT `course_appointment` FOREIGN KEY (`courseID`) REFERENCES `course` (`courseID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `roadmapitems` (
+  `roadmapitemid` int NOT NULL AUTO_INCREMENT,
+  `week` varchar(5) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `style` varchar(10) NOT NULL,
+  `material` varchar(50) DEFAULT NULL,
+  `courseID` int NOT NULL,
+  PRIMARY KEY (`roadmapitemid`),
+  KEY `course_roadmapitems_idx` (`courseID`),
+  CONSTRAINT `course_roadmapitems` FOREIGN KEY (`courseID`) REFERENCES `course` (`courseID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `schedule_course` (
+  `scheduleID` int NOT NULL,
+  `courseID` int NOT NULL,
+  KEY `schedule_course_idx` (`scheduleID`),
+  KEY `course_schedule_idx` (`courseID`),
+  CONSTRAINT `course_schedule` FOREIGN KEY (`courseID`) REFERENCES `course` (`courseID`),
+  CONSTRAINT `schedule_course` FOREIGN KEY (`scheduleID`) REFERENCES `schedule` (`scheduleID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
