@@ -1,3 +1,6 @@
 [submodule "fh-guide-mobile-frontend"]
 	path = fh-guide-mobile-frontend
 	url = https://github.com/Lulon27/fh-guide-mobile-frontend.git
+[submodule "fh-guide-backend"]
+	path = fh-guide-backend
+	url = https://github.com/Hueppy/fh-guide-backend.git
