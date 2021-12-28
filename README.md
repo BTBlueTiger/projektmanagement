@@ -10,16 +10,15 @@ Bis hierhin sollten alle Gruppen eine gewisse Grundstruktur und Idee haben, mit 
 Für alle [Teilgruppen](https://docs.google.com/spreadsheets/d/1OF39aJFD2xsa1V6o9rrrKWcnkTGx6LL6u8j6PGLAdEw/edit#gid=0) ist ein Issue angelegt das im [Main Board](https://github.com/Lulon27/projektmanagement/projects/1) in der Spalte "To Do" wartet.
 Die Ergebnisse können dann zusammengefügt und angeglichen werden und stellen dann unsere Software Spezifikation dar.
 
-[Update]
+Das Skript kann im Repository kann, ohne das man eine eigene Datenbank auf dem Rechner installiert werden muss, zumindest schon in PHPMyAdmin angeschaut werden.
+http://myadmin.fhguide.bplaced.net/index.php
+An der Implementierung der richtigen Api wird gearbeitet.
 
-Der Spezifikations Meilenstein wird verlängert. Durch Ungereimtheiten und verlegtem Meeting ist die Planung nach hinten verschoben worden.
-Es sollte aber in den kommenden Tagen abgeschlossen sein.
+[Update 2.0]
 
 ### [2. Meilenstein](https://github.com/BTBlueTiger/projektmanagement/projects/2)
 
-Es soll ein Prototyp entstehen, der die grundlegenden Funktionen der Applikationen darstellen können soll.
-Das bedeutet, dass die Frontend Leute mithilfe des Backends eine funktionierende Applikationen mit Informationen aus dem Backend gefüttert 
-starten können. Dabei geht es um das Grundgerüst, nicht um etwaige folgende Features.
+Durch Weinachten und dem Übergang zum neuen Jahr, wird ein wenig länger gebraucht.
 
 ### Finaler Meilenstein
 
