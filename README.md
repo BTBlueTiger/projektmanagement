@@ -20,7 +20,7 @@ An der Implementierung der richtigen Api wird gearbeitet.
 
 Durch Weinachten und dem Übergang zum neuen Jahr, wird ein wenig länger gebraucht.
 
-### Finaler Meilenstein
+### [Finaler Meilenstein]
 
-Das Projekt soll hier das funktionierende Grundgerüst iterativ erweitert haben. Funktionen die wünschenswert sind, werden nach Absprache priorisiert.
-Weitere Ergänzung werden nach dem Fortschritt und dazugelerntem ersichtlich.
+Der letzte wünschenswerte Meilenstein sollte sein, dass das System ohne lokale Servereinrichtung funktionieren kann. Es soll möglich sein, sich belanglos die Handy App herunter zuladen oder die Webseite zu besuchen.
+Für die Handy App sollte es reichen sich das Repo laden zu können um sich damit ein erstes Bild zu schaffen.
