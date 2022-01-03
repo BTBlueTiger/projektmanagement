@@ -10,8 +10,9 @@ Bis hierhin sollten alle Gruppen eine gewisse Grundstruktur und Idee haben, mit 
 Für alle [Teilgruppen](https://docs.google.com/spreadsheets/d/1OF39aJFD2xsa1V6o9rrrKWcnkTGx6LL6u8j6PGLAdEw/edit#gid=0) ist ein Issue angelegt das im [Main Board](https://github.com/Lulon27/projektmanagement/projects/1) in der Spalte "To Do" wartet.
 Die Ergebnisse können dann zusammengefügt und angeglichen werden und stellen dann unsere Software Spezifikation dar.
 
-Das Skript kann im Repository kann, ohne das man eine eigene Datenbank auf dem Rechner installiert werden muss, zumindest schon in PHPMyAdmin angeschaut werden.
-http://myadmin.fhguide.bplaced.net/index.php
+Das Skript im Repository kann ohne eine eigene Datenbank auf dem Rechner mit PHPMyAdmin bedient werden. </br>
+(deprecated) ~~myadmin.fhguide.bplaced.net/index.php~~ </br> 
+http://fh-guide.hopto.org:8080/ </br>
 An der Implementierung der richtigen Api wird gearbeitet.
 
 [Update 2.0]
@@ -24,4 +25,5 @@ Geschafft wurde von beiden Frontends jeweils die Screens fertig zu stellen.
 ### [Finaler Meilenstein](https://github.com/BTBlueTiger/projektmanagement/milestone/4)
 
 Der letzte wünschenswerte Meilenstein sollte sein, dass das System ohne lokale Servereinrichtung funktionieren kann. Es soll möglich sein, sich belanglos die Handy App oder die Webseite vom Repo herunter laden zu können und diese sich anzusehen.
+Weiter wird versucht die Webseite ohne nötiges runterladen anzeigen lassen zu können.
 Hoffnung besteht sie auch mit der Api verbinden zu können
