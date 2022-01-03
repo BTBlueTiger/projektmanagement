@@ -19,8 +19,9 @@ An der Implementierung der richtigen Api wird gearbeitet.
 ### [2. Meilenstein](https://github.com/BTBlueTiger/projektmanagement/projects/2)
 
 Durch Weinachten und dem Übergang zum neuen Jahr, wird ein wenig länger gebraucht.
+Geschafft wurde von beiden Frontends jeweils die Screens fertig zu stellen.
 
-### [Finaler Meilenstein]
+### [Finaler Meilenstein][https://github.com/BTBlueTiger/projektmanagement/milestone/4]
 
-Der letzte wünschenswerte Meilenstein sollte sein, dass das System ohne lokale Servereinrichtung funktionieren kann. Es soll möglich sein, sich belanglos die Handy App herunter zuladen oder die Webseite zu besuchen.
-Für die Handy App sollte es reichen sich das Repo laden zu können um sich damit ein erstes Bild zu schaffen.
+Der letzte wünschenswerte Meilenstein sollte sein, dass das System ohne lokale Servereinrichtung funktionieren kann. Es soll möglich sein, sich belanglos die Handy App oder die Webseite vom Repo herunter laden zu können und diese sich anzusehen.
+Hoffnung besteht sie auch mit der Api verbinden zu können
