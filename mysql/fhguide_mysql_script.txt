@@ -15,7 +15,7 @@ CREATE TABLE `module` (
   `name` varchar(30) NOT NULL,
   `description` varchar(200) DEFAULT NULL,
   `active` tinyint NOT NULL,
-  `dependencies` varchar(500) DEFAULT NULL,schedule_course
+  `dependencies` varchar(500) DEFAULT NULL,
   `tags` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`moduleID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
