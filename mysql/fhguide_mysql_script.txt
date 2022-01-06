@@ -5,7 +5,7 @@ CREATE TABLE `account` (
   `accountID` int NOT NULL AUTO_INCREMENT,
   `username` varchar(16) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(100) NOT NULL,
+  `password` varchar(256) NOT NULL,
   `createdate` date NOT NULL,
   PRIMARY KEY (`accountID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -15,7 +15,7 @@ CREATE TABLE `module` (
   `name` varchar(30) NOT NULL,
   `description` varchar(200) DEFAULT NULL,
   `active` tinyint NOT NULL,
-  `dependencies` varchar(500) DEFAULT NULL,schedule_course
+  `dependencies` varchar(500) DEFAULT NULL,
   `tags` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`moduleID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

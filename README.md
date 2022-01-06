@@ -10,18 +10,20 @@ Bis hierhin sollten alle Gruppen eine gewisse Grundstruktur und Idee haben, mit 
 Für alle [Teilgruppen](https://docs.google.com/spreadsheets/d/1OF39aJFD2xsa1V6o9rrrKWcnkTGx6LL6u8j6PGLAdEw/edit#gid=0) ist ein Issue angelegt das im [Main Board](https://github.com/Lulon27/projektmanagement/projects/1) in der Spalte "To Do" wartet.
 Die Ergebnisse können dann zusammengefügt und angeglichen werden und stellen dann unsere Software Spezifikation dar.
 
-[Update]
+Das Skript im Repository kann ohne eine eigene Datenbank auf dem Rechner mit PHPMyAdmin bedient werden. </br>
+(deprecated) ~~myadmin.fhguide.bplaced.net/index.php~~ </br> 
+http://fh-guide.hopto.org:8080/ </br>
+An der Implementierung der richtigen Api wird gearbeitet.
 
-Der Spezifikations Meilenstein wird verlängert. Durch Ungereimtheiten und verlegtem Meeting ist die Planung nach hinten verschoben worden.
-Es sollte aber in den kommenden Tagen abgeschlossen sein.
+[Update 2.0]
 
 ### [2. Meilenstein](https://github.com/BTBlueTiger/projektmanagement/projects/2)
 
-Es soll ein Prototyp entstehen, der die grundlegenden Funktionen der Applikationen darstellen können soll.
-Das bedeutet, dass die Frontend Leute mithilfe des Backends eine funktionierende Applikationen mit Informationen aus dem Backend gefüttert 
-starten können. Dabei geht es um das Grundgerüst, nicht um etwaige folgende Features.
+Durch Weinachten und dem Übergang zum neuen Jahr, wird ein wenig länger gebraucht.
+Geschafft wurde von beiden Frontends jeweils die Screens fertig zu stellen.
 
-### Finaler Meilenstein
+### [Finaler Meilenstein](https://github.com/BTBlueTiger/projektmanagement/milestone/4)
 
-Das Projekt soll hier das funktionierende Grundgerüst iterativ erweitert haben. Funktionen die wünschenswert sind, werden nach Absprache priorisiert.
-Weitere Ergänzung werden nach dem Fortschritt und dazugelerntem ersichtlich.
+Der letzte wünschenswerte Meilenstein sollte sein, dass das System ohne lokale Servereinrichtung funktionieren kann. Es soll möglich sein, sich belanglos die Handy App oder die Webseite vom Repo herunter laden zu können und diese sich anzusehen.
+Weiter wird versucht die Webseite ohne nötiges runterladen anzeigen lassen zu können.
+Hoffnung besteht sie auch mit der Api verbinden zu können
