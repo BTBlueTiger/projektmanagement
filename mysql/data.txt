@@ -1,0 +1,90 @@
+INSERT INTO `account` (`accountID`, `username`, `email`, `password`, `createdate`) VALUES
+(10,	'MaxMustermann',	'beispiel@gmail.de',	'JGFyZ29uMmlkJHY9MTkkbT0zMjc2OCx0PTQscD0xJE9ZNW9YQzNGeFgxTjZ6NHBpWm12RUEkZXEzNElDT0RmakxibTgzU202VW9jME9oTy9rMVhVVUYzRG8wWkpaK2xOOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',	'2022-01-08'),
+(11,	'MusterMax',	'beispiel@mail.de',	'JGFyZ29uMmlkJHY9MTkkbT0zMjc2OCx0PTQscD0xJGo2a3ZsZnhHcStLQit5dldMbzlkZ2ckVzRvQ2pzalBRbFQwS2ZQc3pBaFl4Z1g2VGNrVGVRMVIrS3Zodmx4T2FlTQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',	'2022-01-08'),
+(12,	'Benutzer',	'benutzer@gmail.com',	'JGFyZ29uMmlkJHY9MTkkbT0zMjc2OCx0PTQscD0xJEZzazF5V1hqblgvbUNWNEJ1d3BIUWckM1dPaDZwSjdSSCtBS1pUdDY1WHhKUEFTRzBUWEh0MngvY2kvT1BQY0daSQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',	'2022-01-08');
+
+INSERT INTO `appointment` (`appointmentid`, `day`, `start`, `end`, `courseID`) VALUES
+(1,	'Montag',	'09:00',	'10:30',	1),
+(2,	'Freitag',	'18:00',	'19:30',	2),
+(3,	'Dienstag',	'11:00',	'14:15',	3),
+(4,	'Dienstag',	'15:00',	'16:30',	4),
+(5,	'Montag',	'13:00',	'14:30',	5),
+(6,	'Donnerstag',	'13:00',	'16:00',	6),
+(7,	'Mittwoch',	'6:00',	'7:30',	7),
+(8,	'Montag',	'18:00',	'19:30',	8);
+
+INSERT INTO `course` (`courseID`, `name`, `description`, `room`, `zoomID`, `moduleID`) VALUES
+(1,	'Praktikum',	'Praktischer Teil von OOP',	'B70',	1,	6),
+(2,	'Vorlesung',	'Vorlesung in OOP',	'B70',	2,	6),
+(3,	'Seminar',	'Übungen und Vorlesung in einem',	'D5',	3,	5),
+(4,	'Vorlesung',	'Vorlesung für SP',	'C63',	4,	7),
+(5,	'Praktikum',	'Praktikum für SP',	'C63',	5,	7),
+(6,	'Seminar',	'EIDI Übungen und Input',	'B70',	6,	8),
+(7,	'Vorlesung',	'Vorlesung für ADS',	'C63',	8,	9),
+(8,	'Praktikum',	'Übungen für ADS',	'D580',	7,	9);
+
+INSERT INTO `faq` (`faqID`, `question`, `answer`, `categorie`, `accountID`, `moduleID`) VALUES
+(21,	'Gelten die Corona Freiversuche noch?',	'Nein.',	NULL,	10,	5),
+(22,	'Macht das Modul spaß?',	'Ja ist ganz lustig.',	NULL,	12,	6),
+(23,	'Brauche ich eine Menge Vorerfahrung für OOP?',	'Nein, wir alles von Anfang an erklärt',	'',	12,	6),
+(24,	'Welcher Professor macht ADS?',	'Wahrscheinlich BC',	NULL,	11,	9),
+(25,	'WIe schwer ist das Modul?',	'Gar nicht.',	NULL,	11,	8);
+
+INSERT INTO `module` (`moduleID`, `name`, `description`, `active`, `dependencies`, `tags`) VALUES
+(5,	'IT-Recht',	'Hier lernen Sie gesetzliche Reglungen im Bezug auf Softwareentwicklung kennen.',	1,	'Semester 2',	'IT,Gesetze'),
+(6,	'Objektorientierte Programmierung',	'Hier lernen Sie ganz viel Java kennen.',	1,	'Semester 1',	'Code,Programmierung,Java'),
+(7,	'Systemprogrammierung',	'Hier spielen wir ein wenige mit einem Raspi rum.',	1,	'Semester 3',	'RaspberryPI,C,C++,Linux'),
+(8,	'Einführung in die Informatik',	'Lernen Sie was über die Geschichte der Informatik kennen.',	1,	'Semester 1',	'Geschichte,Grundlagen'),
+(9,	'Algorithmen und Datenstrukturen',	'Hier lernen Sie häufig verwendete Algorithmen und Datenstrukturen kennen.',	1,	'Semester 2',	'ADS,Tree,Stack,Heap,Sort');
+
+INSERT INTO `rating` (`ratingID`, `description`, `accountID`, `moduleID`) VALUES
+(1,	'Meiner Meinung nach zu schwierig.',	12,	9),
+(2,	'Einfach und Anfängerfreundlich',	12,	6),
+(3,	'Schwierig aber sehr interessant',	10,	9),
+(4,	'Bisschen anstrengend 3 Stunden zuzuhören',	12,	5),
+(5,	'Ganz cool',	12,	7);
+
+INSERT INTO `ratingvalue` (`ratingvalueID`, `categorie`, `value`, `ratingid`) VALUES
+(1,	'Coding',	3,	3),
+(2,	'Mathe',	5,	3),
+(3,	'Logik',	10,	1),
+(4,	'Allgemein Wissen',	2,	2),
+(5,	'Zuhörfähigkeit',	5,	4),
+(6,	'Logik',	4,	5);
+
+INSERT INTO `roadmapitems` (`roadmapitemid`, `week`, `name`, `style`, `material`, `courseID`) VALUES
+(1,	'KW42',	'Basis OOP-Konzept',	'Zoom',	'Studentenverwaltung.pdf',	1),
+(2,	'KW43',	'Observer-Pattern',	'Zoom',	'Übungsblatt_KW43.pdf',	1),
+(3,	'KW44',	'Code Minecraft from scratch',	'Zoom',	'Blatt3.pdf',	1),
+(4,	'KW1',	'Strafgesetzbuch',	'Hybrid',	'Skript.pdf',	3),
+(5,	'KW2',	'Unlauterwettbewerb',	'Präsenz',	'Skript.pdf',	1),
+(6,	'KW8',	'Makefiles',	'Zoom',	NULL,	5),
+(7,	'KW42',	'Stack',	'Präsenz',	'Vorlesung entnehmen',	8);
+
+INSERT INTO `schedule` (`scheduleID`, `expiredate`, `createdate`, `accountID`) VALUES
+(1,	NULL,	'2022-01-08',	10),
+(2,	NULL,	'2022-01-08',	11),
+(3,	NULL,	'2022-01-08',	12);
+
+INSERT INTO `schedule_course` (`scheduleID`, `courseID`) VALUES
+(1,	1),
+(1,	2),
+(1,	5),
+(1,	6),
+(2,	1),
+(2,	2),
+(2,	3),
+(2,	4),
+(2,	5),
+(3,	8),
+(3,	7);
+
+INSERT INTO `zoom` (`zoomID`, `password`, `link`, `courseID`) VALUES
+(1,	'12345password54321',	'zoom.us/idFuerOOPpraktikum',	1),
+(2,	'12345password54321',	'zoom.us/idFuerOOPvorlesung',	2),
+(3,	'12345password54321',	'zoom.us/idFuerITRecht',	3),
+(4,	'coolesPasswort',	'zoom.us/SPVorlesung',	4),
+(5,	'coolesPasswort',	'zoom.us/SPPraktikum',	5),
+(6,	'pw',	'zoom.us/eidi',	6),
+(7,	'superSicher',	'zoom.us/PrakADS',	8),
+(8,	'superSicher',	'zoom.us/VorlesungADS',	7);
