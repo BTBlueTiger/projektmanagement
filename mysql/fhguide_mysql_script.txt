@@ -36,7 +36,6 @@ CREATE TABLE `ratingvalue` (
   `ratingvalueID` int NOT NULL AUTO_INCREMENT,
   `categorie` varchar(25) NOT NULL,
   `value` int NOT NULL DEFAULT '0',
-  `ratingvaluecol` varchar(45) NOT NULL,
   `ratingid` int NOT NULL,
   PRIMARY KEY (`ratingvalueID`),
   KEY `rating_ratingvalue_idx` (`ratingid`),
